@@ -5,19 +5,23 @@
         <input type="text" name="name" placeholder="name" value="{{$food->name}}">
         <input type="number" step="0.01" name="price" placeholder="price" value="{{$food->price}}">
         <input type="text" name="ingredients" placeholder="ingredients" value="{{$food->ingredients}}">
-        <label for="vegan">Vegan</label>
-        <input type="checkbox" name="vegan" placeholder="vegan" id="vegan" value="value1"{{ $food->vegan=='value1'?checked}}
-
-        @if ($food->vegan==1)
-            checked    
-        @endif
-        >
-        <label for="gluten-free">Gluten-free</label>
-        <input type="checkbox" name="gluten-free" placeholder="gluten-free" id="gluten-free" value="value1"{{ $food["gluten-free"]=='value1'?checked}}
-        @if ($food["gluten-free"]==1)
-        checked
-        @endif
-        >
+        <div>
+            <label for="vegan">Vegan</label>
+            <input type="hidden" name="vegan" value="0">
+            <input type="checkbox" name="vegan" placeholder="vegan" id="vegan" value="1"
+            @if ($food->vegan)
+                checked    
+            @endif
+            >
+        </div>
+        <div>
+            <label for="gluten-free">Gluten-free</label>
+            <input type="hidden" name="gluten-free" value="0">
+            <input type="checkbox" name="gluten-free" placeholder="gluten-free" id="gluten-free" value="1"
+            @if ($food["gluten-free"])
+                checked                
+            @endif>
+        </div>
         <input type="text" name="course" placeholder="course" value="{{$food->course}}">
         <input type="submit" value="Send">
     

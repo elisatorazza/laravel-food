@@ -92,6 +92,8 @@ class FoodController extends Controller
             'price'=>"required",
             'ingredients'=>"required",
             'course'=>"required|max:15",
+            'vegan'=>"boolean",
+            'gluten-free'=>"boolean",
             ]);
 
         $food = Food::find($id);
