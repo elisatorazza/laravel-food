@@ -114,6 +114,6 @@ class FoodController extends Controller
     {
         $food = Food::find($id);
         $food->delete();
-        return redirect()->route('foods.index');
+        return redirect('/foods')->withSuccess(['Dish deleted successfully!!']);
     }
 }
