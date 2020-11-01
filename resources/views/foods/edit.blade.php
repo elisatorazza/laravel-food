@@ -1,7 +1,14 @@
-<form action="{{route('foods.update', $food->id)}}" method="POST">
-    
-    @csrf
-    @method("PUT")
+@extends('layouts.page')
+
+@section('page-title')
+    Edit dish
+@endsection
+
+@section('page-content')
+<div id="edit-wrapper">
+    <form action="{{route('foods.update', $food->id)}}" method="POST">
+        @csrf
+        @method("PUT")
         <input type="text" name="name" placeholder="name" value="{{$food->name}}">
         <input type="number" step="0.01" name="price" placeholder="price" value="{{$food->price}}">
         <input type="text" name="ingredients" placeholder="ingredients" value="{{$food->ingredients}}">
@@ -23,10 +30,9 @@
             @endif>
         </div>
         <input type="text" name="course" placeholder="course" value="{{$food->course}}">
-        <input type="submit" value="Send">
-    
+        <input type="submit" value="Send"> 
     </form>
-    
+        
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -36,3 +42,6 @@
         </ul>
     </div>
     @endif
+</div>
+@endsection
+    

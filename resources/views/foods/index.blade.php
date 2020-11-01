@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Food list</title>
-</head>
-<body>
+@extends('layouts.page')
+
+@section('page-title')
+    Home of Foods
+@endsection
+
+@section('page-content')
+<div id="index-wrapper">
     <ul>
     @foreach ($foods as $food)
         <li>
-            <a href="{{route('foods.show', $food->id)}}">{{$food->name}}</a>
+            <a href="{{route('foods.show', $food->id)}}">
+                {{$food->name}}
+                <img src="{{$food->image}}" alt="missing image">
+            </a>
             <a href="{{route('foods.edit', $food->id)}}">Edit</a>
             <form action="{{route('foods.destroy', $food->id)}}" method="POST">
                 @csrf
@@ -35,6 +37,4 @@
         @endif
     </div>
     @endif
-    
-</body>
-</html>
+</div>

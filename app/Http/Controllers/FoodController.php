@@ -45,6 +45,7 @@ class FoodController extends Controller
             'price'=>"required",
             'ingredients'=>"required",
             'course'=>"required|max:15",
+            'image'=>"required"
             ]);
 
         $food = new Food;
@@ -94,6 +95,7 @@ class FoodController extends Controller
             'course'=>"required|max:15",
             'vegan'=>"boolean",
             'gluten-free'=>"boolean",
+            'image'=>"required"
             ]);
 
         $food = Food::find($id);

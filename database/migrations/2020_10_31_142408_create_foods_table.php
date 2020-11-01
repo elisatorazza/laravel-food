@@ -21,6 +21,7 @@ class CreateFoodsTable extends Migration
             $table->boolean('vegan')->default(false);
             $table->boolean('gluten-free')->default(false);
             $table->string('course', 15);
+            $table->string('image');
             $table->timestamps();
         });
     }
