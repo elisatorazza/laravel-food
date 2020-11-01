@@ -1,1 +1,32 @@
-//
+// Font Awesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
+// Partials
+@import 'Partials/_variables.scss';
+@import 'Partials/extensions.scss';
+@import 'Partials/_index.scss';
+@import 'Partials/_show.scss';
+@import 'Partials/_create.scss';
+@import 'Partials/_edit.scss';
+
+
+// Page settings
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    // background-image: url('/img/body-bg.gif');
+    background-color: $color4;
+}
+
+.container {
+    width: $containerWidth;
+    margin: 50px auto;
+}

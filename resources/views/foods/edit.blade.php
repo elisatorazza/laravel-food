@@ -5,7 +5,7 @@
 @endsection
 
 @section('page-content')
-<div id="edit-wrapper">
+<div id="edit-wrapper" class="container">
     <form action="{{route('foods.update', $food->id)}}" method="POST">
         @csrf
         @method("PUT")

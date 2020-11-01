@@ -5,7 +5,7 @@
 @endsection
 
 @section('page-content')
-<div id="show-wrapper">
+<div id="show-wrapper" class="container">
     <ul>
         <li>{{$food->name}}</li>
         <li>Price: {{$food->price}} €</li>

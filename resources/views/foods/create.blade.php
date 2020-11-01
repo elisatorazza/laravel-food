@@ -5,7 +5,7 @@
 @endsection
 
 @section('page-content')
-<div id="create-wrapper">
+<div id="create-wrapper" class="container">
     <form action="{{route('foods.store')}}" method="POST">
     @csrf
     @method("POST")

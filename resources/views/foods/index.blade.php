@@ -5,12 +5,13 @@
 @endsection
 
 @section('page-content')
-<div id="index-wrapper">
+<div id="index-wrapper" class="container">
+    <h1>Our selection of dishes</h1>
     <ul>
     @foreach ($foods as $food)
         <li>
+            <h4>{{$food->name}}</h4>
             <a href="{{route('foods.show', $food->id)}}">
-                {{$food->name}}
                 <img src="{{$food->image}}" alt="missing image">
             </a>
             <a href="{{route('foods.edit', $food->id)}}">Edit</a>
