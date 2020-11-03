@@ -3,6 +3,7 @@
     h1 {
         text-align: center;
         padding-bottom: 30px;
+        color: $color5;
     }
 
     ul {
@@ -13,13 +14,14 @@
 
         li {
             width: 350px;
-            background-color: rgba(255,255,255,0.5);
+            background-color: $color2;
             text-align: center;
             border-radius: 15px;
             margin: 10px;
+            padding: 20px;
 
             h4 {
-                color: #000;
+                color: $color5;
                 font-size: 25px;
                 font-weight: 700;
             }
@@ -28,10 +30,40 @@
                 @extend %linkReset;
 
                 img {
+                    display: block;
                     width: 300px;
                     height: auto;
+                    margin: auto;
+                    padding: 10px 0;
+                }
+            }
+
+            i.fa-edit {
+                color: $color5;
+                font-size: 20px;
+            }
+
+            form {
+                display: inline-block;
+
+                button {
+                    border: none;
+                    background: none;
+                    outline: none;
+
+                    .fa-trash-alt {
+                        cursor: pointer;
+                        color: $color5;
+                        font-size: 20px;
+                    }
                 }
             }
         }
+    }
+
+    .add-new {
+        @extend %linkReset;
+        font-weight: 700;
+        color: $color5;
     }
 }

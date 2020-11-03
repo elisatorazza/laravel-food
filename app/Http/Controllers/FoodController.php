@@ -103,7 +103,6 @@ class FoodController extends Controller
         $food->update($data);
 
         return redirect()->route('foods.show', $food);
-        
     }
 
     /**

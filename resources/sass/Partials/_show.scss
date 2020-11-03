@@ -1,0 +1,60 @@
+#show-wrapper {
+
+    h1 {
+        text-align: center;
+        padding-bottom: 30px;
+        color: $color5;
+    }
+
+    ul {
+        @extend %listReset;
+        width: 50%;
+        margin: auto;
+
+        li {
+            width: 100%;
+            padding-bottom: 10px;
+
+            img {
+                width: 200px;
+                height: auto;
+                border-radius: 10px;
+            }
+
+            a {
+                @extend %linkReset;
+
+                i.fa-edit {
+                    color: $color5;
+                    font-size: 20px;
+                }
+            }
+
+            form {
+                display: inline-block;
+
+                button {
+                    border: none;
+                    background: none;
+                    outline: none;
+
+                    .fa-trash-alt {
+                        cursor: pointer;
+                        color: $color5;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        
+            #back {
+                text-align: right;
+
+                a {  
+                    @extend %linkReset;
+                    font-weight: 700;
+                    color: $color5;
+                }
+            }
+    }
+}

@@ -6144,10 +6144,14 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+#show-wrapper ul,
 #index-wrapper ul {
   list-style: none;
 }
 
+#show-wrapper ul #back a,
+#show-wrapper ul li a,
+#index-wrapper .add-new,
 #index-wrapper ul li a {
   text-decoration: none;
 }
@@ -6155,6 +6159,7 @@ readers do not read off random characters that represent icons */
 #index-wrapper h1 {
   text-align: center;
   padding-bottom: 30px;
+  color: #9e8189;
 }
 
 #index-wrapper ul {
@@ -6165,21 +6170,181 @@ readers do not read off random characters that represent icons */
 
 #index-wrapper ul li {
   width: 350px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #ffe6e6;
   text-align: center;
   border-radius: 15px;
   margin: 10px;
+  padding: 20px;
 }
 
 #index-wrapper ul li h4 {
-  color: #000;
+  color: #9e8189;
   font-size: 25px;
   font-weight: 700;
 }
 
 #index-wrapper ul li a img {
+  display: block;
   width: 300px;
   height: auto;
+  margin: auto;
+  padding: 10px 0;
+}
+
+#index-wrapper ul li i.fa-edit {
+  color: #9e8189;
+  font-size: 20px;
+}
+
+#index-wrapper ul li form {
+  display: inline-block;
+}
+
+#index-wrapper ul li form button {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+#index-wrapper ul li form button .fa-trash-alt {
+  cursor: pointer;
+  color: #9e8189;
+  font-size: 20px;
+}
+
+#index-wrapper .add-new {
+  font-weight: 700;
+  color: #9e8189;
+}
+
+#show-wrapper h1 {
+  text-align: center;
+  padding-bottom: 30px;
+  color: #9e8189;
+}
+
+#show-wrapper ul {
+  width: 50%;
+  margin: auto;
+}
+
+#show-wrapper ul li {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+#show-wrapper ul li img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+#show-wrapper ul li a i.fa-edit {
+  color: #9e8189;
+  font-size: 20px;
+}
+
+#show-wrapper ul li form {
+  display: inline-block;
+}
+
+#show-wrapper ul li form button {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+#show-wrapper ul li form button .fa-trash-alt {
+  cursor: pointer;
+  color: #9e8189;
+  font-size: 20px;
+}
+
+#show-wrapper ul #back {
+  text-align: right;
+}
+
+#show-wrapper ul #back a {
+  font-weight: 700;
+  color: #9e8189;
+}
+
+#create-wrapper h1 {
+  text-align: center;
+  padding-bottom: 30px;
+  color: #9e8189;
+}
+
+#create-wrapper form {
+  width: 50%;
+  margin: auto;
+}
+
+#create-wrapper form input:not([type=checkbox]) {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+}
+
+#create-wrapper form input:not([type=checkbox])[type=submit] {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #9e8189;
+  color: #ffcad4;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+#create-wrapper form input:not([type=checkbox])[type=number] {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+#create-wrapper form input[type=checkbox] {
+  margin: 10px;
+}
+
+#edit-wrapper h1 {
+  text-align: center;
+  padding-bottom: 30px;
+  color: #9e8189;
+}
+
+#edit-wrapper form {
+  width: 50%;
+  margin: auto;
+}
+
+#edit-wrapper form input:not([type=checkbox]) {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+}
+
+#edit-wrapper form input:not([type=checkbox])[type=submit] {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #f3acb6;
+  color: #FAEEE6;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+#edit-wrapper form input:not([type=checkbox])[type=number] {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+#edit-wrapper form input[type=checkbox] {
+  margin: 10px;
 }
 
 * {
@@ -6190,7 +6355,7 @@ readers do not read off random characters that represent icons */
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #f3acb6;
+  background-color: #ffcad4;
 }
 
 .container {

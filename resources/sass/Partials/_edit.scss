@@ -1,0 +1,41 @@
+#edit-wrapper {
+  
+    h1 {
+        text-align: center;
+        padding-bottom: 30px;
+        color: $color5;
+    }
+
+    form {
+        width: 50%;
+        margin: auto;
+
+        input:not([type="checkbox"]) {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            border: none;
+            outline: none;
+            border-radius: 7px;
+
+            &[type="submit"] {
+                margin-top: 20px;
+                cursor:pointer;
+                background-color: $color4;
+                color: $color1;
+                font-weight: 700;
+                font-size: 15px;
+            }
+
+            &[type="number"] {
+                -webkit-appearance: none;
+                -moz-appearance: textfield;
+            }
+        }
+
+        input[type="checkbox"] {
+            margin: 10px;
+        }
+    }
+}
